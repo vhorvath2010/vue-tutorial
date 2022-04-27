@@ -18,7 +18,7 @@ export default {
 <template>
   <h1 :class="titleClass">Counter</h1>
   <input v-model="counting" placeholder="What are we counting?">
-  <p>We are counting {{ counting }}</p>
+  <p v-if="counting">We are counting {{ counting }}</p>
   <button @click="increment">Count: {{ count }}</button>
 </template>
 
