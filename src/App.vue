@@ -2,9 +2,9 @@
 export default {
   data() {
     return {
-      message: "Hello World!",
-      helloClass: "title",
-      count: 0,
+      titleClass: "title",
+      counting: '',
+      count: 0
     }
   },
   methods: {
@@ -12,17 +12,18 @@ export default {
       this.count++;
     }
   }
-
 }
 </script>
 
 <template>
-  <h1 :class="helloClass">{{ message }}</h1>
-  <button @click="increment">{{ "Count: " + count }}</button>
+  <h1 :class="titleClass">Counter</h1>
+  <input v-model="counting" placeholder="What are we counting?">
+  <p>We are counting {{ counting }}</p>
+  <button @click="increment">Count: {{ count }}</button>
 </template>
 
 <style>
 .title {
-  color: red;
+  color: slateblue;
 }
 </style>
