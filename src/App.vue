@@ -4,13 +4,21 @@ export default {
     return {
       message: "Hello World!",
       helloClass: "title",
+      count: 0,
+    }
+  },
+  methods: {
+    increment() {
+      this.count++;
     }
   }
+
 }
 </script>
 
 <template>
-  <h1 v-bind:class="helloClass">{{ message }}</h1>
+  <h1 :class="helloClass">{{ message }}</h1>
+  <button @click="increment">{{ "Count: " + count }}</button>
 </template>
 
 <style>
