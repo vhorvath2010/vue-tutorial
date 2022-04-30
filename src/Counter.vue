@@ -16,14 +16,14 @@ export default {
 </script>
 
 <template>
-  <h1 :class="titleClass">Counter</h1>
-  <input v-model="counting" placeholder="What are we counting?">
-  <p v-if="counting">We are counting {{ counting }}</p>
-  <button @click="increment">Count: {{ count }}</button>
+    <h1 :class="titleClass">Counter</h1>
+    <input v-model="counting" placeholder="What are we counting?">
+    <p v-if="counting">We are counting {{ counting }}</p>
+    <button @click="increment">Count: {{ count }}</button>
 </template>
 
 <style>
 .title {
-  color: slateblue;
+    color: slateblue;
 }
 </style>
